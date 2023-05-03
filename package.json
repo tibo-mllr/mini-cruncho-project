@@ -1,6 +1,7 @@
 {
   "name": "proximity-cruncher",
   "version": "0.1.0",
+  "author": "MULLER Thibault",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,9 +11,13 @@
     "@types/node": "^16.18.25",
     "@types/react": "^18.2.1",
     "@types/react-dom": "^18.2.3",
+    "bootstrap": "^5.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.62.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0"
   }
 }
