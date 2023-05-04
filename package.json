@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@types/googlemaps": "^3.43.3",
     "eslint-config-prettier": "^8.8.0"
   }
 }
