@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
-import Header from './componnents/header';
-import Map from './componnents/map';
+import Header from './components/header';
+import Map from './components/map';
 
 export default function App(): ReactElement {
   return (
