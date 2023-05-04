@@ -49,7 +49,6 @@ export default function Map(): ReactElement {
   }
 
   function getNearByPlaces(pos: { lat: number; lng: number }): void {
-    console.log('getNearByPlaces:' + pos.lat + ',' + pos.lng);
     request = {
       location: pos,
       radius: radius,
