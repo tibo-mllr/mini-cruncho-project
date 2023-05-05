@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ReactElement, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
 
-export default function Map(): ReactElement {
+type MapProps = {
+  setSelectedPlace: (selectedPlace: google.maps.places.PlaceResult) => void;
+};
+
+export default function Map({ setSelectedPlace }: MapProps): ReactElement {
   let infoWindow: google.maps.InfoWindow;
   let map: google.maps.Map;
   let pos: { lat: number; lng: number };
@@ -97,6 +100,7 @@ export default function Map(): ReactElement {
     });
 
     google.maps.event.addListener(marker, 'click', function () {
+      setSelectedPlace(place);
       const homePos = home.getPosition()!;
       const markerPos = marker.getPosition()!;
       const R = 6371; // Radius of the Earth in km
@@ -115,15 +119,12 @@ export default function Map(): ReactElement {
           ),
         );
 
+      console.log(place);
       infoWindow.setContent(place.name + ' - ' + d.toFixed(3) + ' km from your location');
       infoWindow.open(map, marker);
     });
     return marker;
   }
 
-  return (
-    <Container style={{ justifyContent: 'center' }}>
-      <div id="map" className="map-container"></div>
-    </Container>
-  );
+  return <div id="map" className="map-container"></div>;
 }
