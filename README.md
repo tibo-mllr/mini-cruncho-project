@@ -19,9 +19,9 @@ npm run start
 ## Usage
 
 - Once the user accepted the app to use the location, the 10 nearest restaurants are computed and displayed on the map.
-  By clicking on those locations, you can view their name and how far away you are.
+  By clicking on those locations, you can view their name and how far away you are directly on the map, and have more details in the overview at the bottom.
+- You can also select a restaurant in the list on the right, it will open the details, and it should be highlighted on the map.
 
 ### Notes
 
-- V0 - Only functional.
-  Still eager to add new features soon.
+- Still eager to add new features soon.
